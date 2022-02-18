@@ -8,7 +8,7 @@ services:
       target: dev
     ports:
       - 3000:3000
-    command: npx nest start --watch
+    command: npx nest start reload-tst --watch
     volumes:
       - .:/app
       - nodeModulesz:/app/node_modules

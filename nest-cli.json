@@ -1,4 +1,30 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/reload-tst/src",
+  "monorepo": true,
+  "root": "apps/reload-tst",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/reload-tst/tsconfig.app.json"
+  },
+  "projects": {
+    "reload-tst": {
+      "type": "application",
+      "root": "apps/reload-tst",
+      "entryFile": "main",
+      "sourceRoot": "apps/reload-tst/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/reload-tst/tsconfig.app.json"
+      }
+    },
+    "random": {
+      "type": "application",
+      "root": "apps/random",
+      "entryFile": "main",
+      "sourceRoot": "apps/random/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/random/tsconfig.app.json"
+      }
+    }
+  }
 }
