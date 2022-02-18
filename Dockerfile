@@ -10,3 +10,4 @@ RUN npm install
 
 COPY . .
 
+CMD  ["npx", "nest", "start", "reload-tst", "--watch"] 
